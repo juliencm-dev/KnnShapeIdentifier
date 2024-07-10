@@ -1,0 +1,35 @@
+Ce logiciel est le projet numéro 1 du cours C52.
+
+Il a été réalisé par :
+
+Rémi Chuet
+Julien Coulombe-Morency
+
+Il consiste à effectuer la classification d'images binaires en utilisant les concepts suivants :
+
+- L'utilisation de la librairie Numpy pour la vectorisation des tableaux de données.
+- L'utilisation de la librairie Qt pour gérer l'interface graphique du programme.
+- L'utilisation de l'algorithme KNN (K-nearest neighbors) pour déterminer le type d'image en fonction des données d'entraînement fournies et des descripteurs choisis.
+
+Nos trois descripteurs de formes sont :
+- 4pi * aire / perimetre**2
+ 
+- Centroïde (calcul du ratio de l'aire d'un cercle généré par la distance entre le centroïde et le point le plus éloigné, et l'aire de la forme)
+- Centroïde (grand rayon - autre rayon / grand rayon)
+        - Si le centroïde est vide, on calcule le rayon entre le point noir le plus proche et le point le plus éloigné de la forme.
+        - Si le centroïde est noir, on calcule le rayon entre le point blanc le plus proche et le point le plus éloigné de la forme.
+- Plus précisément, ce laboratoire permet de mettre en pratique :
+
+Les notions d’IA apprises en cours.
+- Nos connaissances en Qt.
+- Nos connaissances en Numpy.
+
+Un effort d'abstraction a été réalisé sur les points suivants :
+- La classe KNN.
+- La classe KlustrDataClassifier, qui comporte l'ensemble des fonctions de classification liées à notre problématique.
+- La classe BinaryImageAnalyser, conçue dans l'esprit de généralisation d'une librairie de traitement d'images binaires.
+- Les widgets en général.
+
+Finalement, le jeu de données le plus complexe que nous avons réussi à traiter est :
+
+Zoo Large
